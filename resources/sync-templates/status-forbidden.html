@@ -1,0 +1,9 @@
+There are forbidden modifications, fix before continuing
+  {% if missing|not-empty %}
+  missing entities
+    {{missing|safe}}
+  {% endif %} {% if not-ok|not-empty %}
+  forbidden alterations
+    {{not-ok|safe}}
+  {% endif %}
+{% include "status.html" %}

@@ -1,0 +1,15 @@
+DB is behind by {{behind}} revision(s)
+
+  you may use "lein sync push" to apply the revision{{behind|pluralize}} to db
+
+  or
+
+  you may use "lein sync reset" to undo all operations
+    * this cmd will be allowed only with dev db instances
+    - db will be deleted
+    - db will be recreated
+    - revision file will be delete
+    - revision file committed in master will be restored
+    - revisions will be pushed to db
+
+{% include "status.html" %}

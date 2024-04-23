@@ -1,0 +1,355 @@
+{
+ :2020-05-01|23:05:56|utc
+ {:requires [:2020-05-01|23:05:13|utc],
+  :txes
+  [(#:db{:ident :cell/idx,
+         :valueType :db.type/long,
+         :cardinality :db.cardinality/one})]},
+
+ :2020-05-01|23:05:13|utc
+ {:requires [:2020-04-28|00:37:34|utc],
+  :txes
+  [(#:db{:ident :cell/ref, :id :datofu.coll.array.cell/ref-comp})]},
+
+ :2020-04-28|00:37:34|utc
+ {:requires [:2020-04-28|00:36:33|utc],
+  :txes
+  [(#:db{:ident :math.subtopic/aritmética}
+
+    #:db{:ident :math.subtopic/equação-do-2º-grau}
+
+    #:db{:ident :math.subtopic/fatoração}
+
+    #:db{:ident :math.subtopic/inequação}
+
+    #:db{:ident :math.subtopic/logaritimo}
+
+    #:db{:ident :math.subtopic/módulo}
+
+    #:db{:ident :math.subtopic/número-complexo}
+
+    #:db{:ident :math.subtopic/potência}
+
+    #:db{:ident :math.subtopic/raiz-quadrada}
+
+    #:db{:ident :math.topic/álgebra}
+
+    #:db{:ident :question/desc,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question/id,
+         :valueType :db.type/uuid,
+         :cardinality :db.cardinality/one,
+         :unique :db.unique/identity}
+
+    #:db{:ident :question.alt/a,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question.alt/b,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question.alt/c,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question.alt/d,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question.alt/e,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :session/id,
+         :valueType :db.type/uuid,
+         :cardinality :db.cardinality/one,
+         :unique :db.unique/identity}
+
+    #:db{:ident :solution/desc,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :solution/id,
+         :valueType :db.type/uuid,
+         :cardinality :db.cardinality/one,
+         :unique :db.unique/identity}
+
+    #:db{:ident :submission/id,
+         :valueType :db.type/uuid,
+         :cardinality :db.cardinality/one,
+         :unique :db.unique/identity}
+
+    #:db{:ident :user/id,
+         :valueType :db.type/uuid,
+         :cardinality :db.cardinality/one,
+         :unique :db.unique/identity,
+         :doc "Unique email"})]},
+
+ :2020-04-28|00:36:33|utc
+ {:requires [:2020-04-28|00:35:24|utc],
+  :txes [(#:db{:ident :session/questions, :isComponent true})]},
+
+ :2020-04-28|00:35:24|utc
+ {:requires [:2020-04-28|00:32:20|utc],
+  :txes
+  [(#:db{:ident :deprecated/question.alt.a|2020-04-28|00:35:24|UTC,
+         :id :question.alt/a}
+
+    #:db{:ident :deprecated/question.alt.b|2020-04-28|00:35:24|UTC,
+         :id :question.alt/b}
+
+    #:db{:ident :deprecated/question.alt.c|2020-04-28|00:35:24|UTC,
+         :id :question.alt/c}
+
+    #:db{:ident :deprecated/question.alt.d|2020-04-28|00:35:24|UTC,
+         :id :question.alt/d}
+
+    #:db{:ident :deprecated/question.alt.e|2020-04-28|00:35:24|UTC,
+         :id :question.alt/e}
+
+    #:db{:ident :deprecated/question.desc|2020-04-28|00:35:24|UTC,
+         :id :question/desc}
+
+    #:db{:ident :deprecated/solution.desc|2020-04-28|00:35:24|UTC,
+         :id :solution/desc})]},
+
+ :2020-04-28|00:32:20|utc
+ {:requires [:2020-04-28|00:28:06|utc],
+  :txes
+  [(#:db{:ident :deprecated/text.math|2020-04-28|00:32:20|UTC,
+         :id :text/math})]},
+
+ :2020-04-28|00:28:06|utc
+ {:requires [:2020-04-22|01:22:04|utc|],
+  :txes
+  [(#:db{:ident :session.info/created_at, :id :question/created_at}
+
+    #:db{:ident :session.info/subtopic, :id :question/subject}
+
+    #:db{:ident :session.info/topic, :id :question/topic})]},
+
+ :2020-04-22|01:22:04|utc|
+ {:txes
+  [(#:db{:ident :datofu.coll.array/cells,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/many,
+         :isComponent true}
+
+    #:db{:ident :datofu.coll.array.cell/bigdec,
+         :valueType :db.type/bigdec,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :datofu.coll.array.cell/bigint,
+         :valueType :db.type/bigint,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :datofu.coll.array.cell/boolean,
+         :valueType :db.type/boolean,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :datofu.coll.array.cell/bytes,
+         :valueType :db.type/bytes,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :datofu.coll.array.cell/double,
+         :valueType :db.type/double,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :datofu.coll.array.cell/float,
+         :valueType :db.type/float,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :datofu.coll.array.cell/index,
+         :valueType :db.type/long,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :datofu.coll.array.cell/instant,
+         :valueType :db.type/instant,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :datofu.coll.array.cell/keyword,
+         :valueType :db.type/keyword,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :datofu.coll.array.cell/long,
+         :valueType :db.type/long,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :datofu.coll.array.cell/ref,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :datofu.coll.array.cell/ref-comp,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :isComponent true}
+
+    #:db{:ident :datofu.coll.array.cell/string,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :datofu.coll.array.cell/uri,
+         :valueType :db.type/uri,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :datofu.coll.array.cell/uuid,
+         :valueType :db.type/uuid,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :goal/degree,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :goal/exam,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question/alts,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :isComponent true}
+
+    #:db{:ident :question/answer,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :isComponent true}
+
+    #:db{:ident :question/created_at,
+         :valueType :db.type/instant,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question/desc,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :isComponent true}
+
+    #:db{:ident :question/solutions,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/many,
+         :isComponent true}
+
+    #:db{:ident :question/subject,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question/topic,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question.alt/a,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question.alt/b,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question.alt/c,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question.alt/d,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question.alt/e,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :question.alt/skipped}
+
+    #:db{:ident :schedule/days,
+         :valueType :db.type/long,
+         :cardinality :db.cardinality/one,
+         :doc "Days dedicated to study"}
+
+    #:db{:ident :schedule/hours,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one,
+         :doc "Hours dedicated in a study day"}
+
+    #:db{:ident :session/info,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :isComponent true}
+
+    #:db{:ident :session/questions,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/many}
+
+    #:db{:ident :solution/desc,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :isComponent true}
+
+    #:db{:ident :submission/selections,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/many,
+         :isComponent true}
+
+    #:db{:ident :submission/session,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :doc "Reference to a session"}
+
+    #:db{:ident :submission/timespan,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :isComponent true}
+
+    #:db{:ident :submission/user,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :doc "Reference to a user"}
+
+    #:db{:ident :submission.selection/question,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :doc "Reference to a question"}
+
+    #:db{:ident :submission.selection/selected,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :doc "Reference to a question alt"}
+
+    #:db{:ident :submission.selection/timespan,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :isComponent true}
+
+    #:db{:ident :text/math,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one,
+         :doc "A Mathquill html text"}
+
+    #:db{:ident :timespan/ended_at,
+         :valueType :db.type/instant,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :timespan/started_at,
+         :valueType :db.type/instant,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :user/email,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one,
+         :unique :db.unique/identity,
+         :doc "Unique email"}
+
+    #:db{:ident :user/goal,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :isComponent true}
+
+    #:db{:ident :user/name,
+         :valueType :db.type/string,
+         :cardinality :db.cardinality/one}
+
+    #:db{:ident :user/schedule,
+         :valueType :db.type/ref,
+         :cardinality :db.cardinality/one,
+         :isComponent true})]}}
+

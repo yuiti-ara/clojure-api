@@ -1,0 +1,13 @@
+version: '2'
+
+volumes:
+  data:
+
+services:
+  transactor-dev:
+    build: ""
+    network_mode: host
+    ports:
+      - "4334:4334"
+    volumes:
+      - data:/opt/datomic-pro-0.9.5561/data

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+diffs=$( git diff origin/master api/resources/revisions.edn | sed -e "s/^--- a//" | grep ^- )
+
+if [[ ${#diffs} -gt 0 ]]
+then
+  echo "resources/revisions.edn should not have deleted lines when comparing with master"
+  echo "  fix before continuing"
+  exit 1
+fi

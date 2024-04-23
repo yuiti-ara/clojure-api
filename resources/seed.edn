@@ -1,0 +1,38 @@
+[{:db/id          "s0q0s0"
+  :solution/id    #uuid"8c4b1aa5-4b91-47f2-877b-000000000001"
+  :solution/desc  "solution s0q0s0"}
+ {:db/id          "s0q0s1"
+  :solution/id    #uuid"8c4b1aa5-4b91-47f2-877b-000000000002"
+  :solution/desc  "solution s0q0s1"}
+ {:db/id              "s0q0"
+  :question/id        #uuid"8c4b1aa5-4b91-47f2-877b-000000000004"
+  :question/answer    :question.alt/b,
+  :question/desc      "question 0"
+  :question/alts      {:question.alt/a "wrong"
+                       :question.alt/b "correct"
+                       :question.alt/c "incorrect"
+                       :question.alt/d "not right"
+                       :question.alt/e "not correct"}
+  :question/solutions [{:cell/idx 0 :cell/ref "s0q0s0"}
+                       {:cell/idx 1 :cell/ref "s0q0s1"}]}
+
+ {:db/id          "s0q1s0"
+  :solution/id    #uuid"8c4b1aa5-4b91-47f2-877b-000000000003"
+  :solution/desc  "solution s0q1s0"}
+ {:db/id              "s0q1"
+  :question/id        #uuid"8c4b1aa5-4b91-47f2-877b-000000000005"
+  :question/answer    :question.alt/b,
+  :question/desc      "question 1"
+  :question/alts      {:question.alt/a "wrong"
+                       :question.alt/b "correct"
+                       :question.alt/c "incorrect"
+                       :question.alt/d "not right"
+                       :question.alt/e "not correct"}
+  :question/solutions [{:cell/idx 0 :cell/ref "s0q1s0"}]}
+
+ {:session/id         #uuid"8c4b1aa5-4b91-47f2-877b-000000000006"
+  :session/questions  [{:cell/idx 0 :cell/ref "s0q0"}
+                       {:cell/idx 1 :cell/ref "s0q1"}]
+  :session/info       {:session.info/topic      :math.topic/álgebra
+                       :session.info/subtopic   :math.subtopic/logaritimo
+                       :session.info/created_at #inst"2020-01-01"}}]

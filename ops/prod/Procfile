@@ -1,0 +1,2 @@
+release: lein sync init && lein sync push && lein sync status
+web: java $JVM_OPTS -cp target/api.jar clojure.main -m api.core

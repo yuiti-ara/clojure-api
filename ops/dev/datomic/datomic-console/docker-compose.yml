@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  console-dev:
+    build: ""
+    network_mode: host
+    ports:
+      - "9000:9000"
